@@ -9,10 +9,9 @@
       <main class="container">
         <div class="d-flex justify-content-between">
           <h1>Lista de Livros</h1>
-          <!-- <form action="/users/search" class="d-flex justify-content-around align-itens-center" method="get">
-            <input type="text" name="key" placeholder="Pesquisar..." class="form-control">
-            <button type="submit" class="ml-3 btn btn-success">Pesquisar</button>
-          </form> -->
+          <form action="/livros/criar" class="d-flex justify-content-around align-itens-center" method="get">
+            <button type="submit" class="ml-3 btn btn-success">Cadastrar Livro</button>
+          </form>
         </div>
        
         <table class="table">
@@ -40,7 +39,7 @@
 
 
                   <th>
-                    <a href="/livros/editar/<%= livro.id %>" class="btn btn-warning">Editar Dados</a>
+                    <a href="/livros/editar/<%= livro.id %>" class="btn btn-warning">Editar Dados</a>           
                   </th>
                   
 

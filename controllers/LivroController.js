@@ -14,6 +14,22 @@ const LivroController = {
         // res.render('livros', {livros: livros});
        
     },
+
+    create:async(req,res)=>{
+        res.render('criarLivros');
+    },
+    store:async(req,res)=>{
+       const {titulo, quantidade_paginas, autor, ano_lancamento, estoque} = req.body;
+       let livro = await Livro.create({
+           titulo,
+            quantidade_paginas,
+            autor,
+            ano_lancamento,
+            estoque
+       }) 
+       console.log(livro);
+       res.redirect('/livros');
+    },
     edit:async(req, res) => {
         const {id} = req.params;
 
