@@ -6,13 +6,13 @@ const {Livro} = require('../models');
 
 const LivroController = {
     index: async(req, res) => {
-       let livros = await Livro.findAll(
-        //    {    attributes: ['id', 'titulo', 'quantidade_paginas','autor', 'ano_lancamento','estoque' ]}
-        )
-         res.render('livros', {livros});
-       
-        // res.render('livros', {livros: livros});
-       
+      try{
+        let livros = await Livro.findAll()
+        res.render('livros', {livros});     
+      }catch(err){
+        console.log(err);
+      }
+         
     },
 
     create:async(req,res)=>{
@@ -34,19 +34,10 @@ const LivroController = {
         const {id} = req.params;
 
         let livro = await Livro.findOne({
-            // attributes: ['id', 'titulo', 'quantidade_paginas','autor', 'ano_lancamento','estoque' ],
             where: {id: id}
             
         })
         
-        // let livro = await Livro.findByPk(id,{
-        //     attributes: ['titulo', 'quantidade_paginas','autor', 'ano_lancamento','estoque' ]
-        // })
-        // res.render('editar', {livro: livro});
-        // let livro = await Livro.findOne({
-        // attributes: ['id', 'titulo', 'quantidade_paginas','autor', 'ano_lancamento','estoque' ],
-        // where: {id: id}
-        // })
         res.render('editarLivros',{livro});
     },
     update:async(req,res)=>{

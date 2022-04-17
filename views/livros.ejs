@@ -38,7 +38,7 @@
                   <th><%= livro.estoque %></th>
 
 
-                  <th>
+                  <th class="d-flex justify-content-between">
                     <a href="/livros/editar/<%= livro.id %>" class="btn btn-warning">Editar Dados</a>     
                     <form action="/livros/deletar/<%= livro.id %>?_method=DELETE " method="post">
                       <button class="btn btn-danger" type="submit">Excluir</button>
