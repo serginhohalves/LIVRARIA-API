@@ -66,6 +66,14 @@ const LivroController = {
         })
         console.log(updateLivro);
         res.redirect('/livros');
+    },
+    delete:async(req,res)=>{
+        const {id} = req.params;
+        let deleteLivro = await Livro.destroy({
+            where: {id: id}
+        })
+        console.log(deleteLivro);
+        res.redirect('/livros');
     }
 
 }
