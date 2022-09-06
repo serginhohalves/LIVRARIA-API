@@ -17,5 +17,18 @@
     "op": "^0.0.6",
     "sequelize": "^5.22.5",
     "sequelize-cli": "^5.5.1"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serginhohalves/LIVRARIA-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/serginhohalves/LIVRARIA-API/issues"
+  },
+  "homepage": "https://github.com/serginhohalves/LIVRARIA-API#readme",
+  "description": ""
 }
